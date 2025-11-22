@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>Formulário de Contato!</title>
+
+    <style>
+        h1 {
+            background-color: #25119b;
+            color: rgb(175, 171, 240);
+            width: 98%;
+            margin: 0.5rem auto;
+            padding: 0.5rem;
+            text-align: center;
+            border: 2px solid rgb(31, 17, 56);
+        }
+
+        legend {
+            background-color: #4c34d4;
+            color: rgb(175, 171, 240);
+            margin: 0.5rem auto;
+            padding: 0.5rem;
+            text-align: center;
+            border: 2px solid rgb(63, 43, 97);
+            width: 90%;
+        }
+
+        button {
+            background-color: #25119b;
+            color: rgb(175, 171, 240);
+            width: 650px;
+            margin: 0.5rem auto;
+            padding: 0.5rem;
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            border: 2px solid rgb(31, 17, 56);
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Formulário de Contato:</h1>
+
+    <main>
+        <form id="contatoForm" action="#" method="post">
+            <fieldset>
+                <legend class="dado-pessoal">Dados Pessoais</legend>
+
+                <label for="nome">Nome completo</label><br />
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                <br /><br />
+
+                <label for="email">Email</label><br />
+                <input type="email" id="email" name="email" placeholder="nome@exemplo.com" required>
+                <br /><br />
+
+                <label for="telefone">Telefone</label><br />
+                <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" inputmode="tel">
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Contato</legend>
+
+                <label for="assunto">Assunto</label><br />
+                <select id="assunto" name="assunto" required>
+                    <option value="" disabled selected>Selecione um assunto</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="sugestao">Sugestão</option>
+                    <option value="reclamacao">Reclamação</option>
+                </select>
+                <br /><br />
+
+                <label for="mensagem">Mensagem</label><br />
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required>
+            </textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Como conheceu o site</legend>
+                <label><input type="radio" name="conheceu" value="busca" checked>Busca</label><br />
+                <label><input type="radio" name="conheceu" value="redes_sociais"> Redes Sociais</label><br />
+                <label><input type="radio" name="conheceu" value="indicacao"> Indicação</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Opções</legend> <label><input type="checkbox" name="newsletter" value="sim"> Deseja receber
+                    newsletter</label>
+            </fieldset>
+
+            <button type="submit">Cadastrar</button>
+            <button type="reset">Limpar Formulário</button>
+            <br>
+            <br>
+        </form>
+    </main>
+</body>
+
+</html>
