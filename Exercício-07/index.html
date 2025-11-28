@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>Página do Produto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .gallery img {
+            width: 150px;
+            margin-right: 10px;
+            padding: 68px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        article {
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Tênis All Star</h1>
+
+    <div class="gallery">
+        <img src="../assets/tenisVermelho.png" alt="Imagem do tênis vermelho">
+        <img src="../assets/tenisAzul.png" alt="Imagem do tênis azul">
+        <img src="../assets/tenisVerde01.png" alt="Imagem do tênis verde">
+        <img src="../assets/tenisPreto.jpg" alt="Imagem do tênis preto">
+    </div>
+
+    <strong>Preço: R$ 199,90</strong>
+
+    <h2>Descrição Detalhada</h2>
+    <p>Para os apaixonados por um clássicos de "Cano alto"!</p>
+    <p>Com design icônico e atemporal, esse tênis oferece o máximo de conforto e estilo para o dia a dia.</p>
+    <p>O cabedal em lona e solado de borracha garantem durabilidade e praticidade.</p>
+    <p>Perfeito para compor um look casual e elegante, combina perfeitamente com jeans e camiseta, refletindo um lifestyle despojado e moderno.</p> 
+    <p> Adquira o seu e destaque-se com esse clássico indispensável!</p>
+
+    <h2>Especificações Técnicas</h2>
+    <table>
+        <tr>
+            <th>Especificação</th>
+            <th>Detalhe</th>
+        </tr>
+        <tr>
+            <td>Tamanho de referência</td>
+            <td>37</td>
+        </tr>
+         <tr>
+            <td>Estilo</td>
+            <td>Clássico</td>
+        </tr>
+        <tr>
+            <td>Dimensões do produto</td>
+            <td>30 x 20 x 10 cm; 620 g</td>
+        </tr>
+         <tr>
+            <td>Esportes</td>
+            <td>Caminhada</td>
+        </tr>
+         <tr>
+            <td>Departamento</td>
+            <td>adulto-unissex</td>
+        </tr>
+         <tr>
+            <td>Fabricante</td>
+            <td>ALL STAR</td>
+        </tr>
+        <tr>
+            <td>Material</td>
+            <td>Externo: Lona, Palmilha: Eva e Solado: Borracha</td>
+        </tr>
+    </table>
+
+    <h2>Avaliações de Clientes</h2>
+    <article>
+        <h3>Cliente 1</h3>
+        <p>Ótimo produto! Recomendo a todos.</p>
+    </article>
+    <article>
+        <h3>Cliente 2</h3>
+        <p>Atendeu todas as minhas expectativas. Vale a pena!</p>
+    </article>
+    <article>
+        <h3>Cliente 3</h3>
+        <p>Tênis maravilhoso! Comprei o número 35 e ele é levemente maior que meu pé (o que é bom, pois deixa o pé confortável). A qualidade da marca é impecável.</p>
+    </article>
+    <article>
+        <h3>Cliente 4</h3>
+        <p>Tenis muito confortável, ótimo acabamento e é bem estofado, infelizmente tive que reembolsar o meu por causa do tamanho, pedi 41 e ficou grande, mesmo eu sendo 41. Tirando isso é só perfeição!</p>
+    </article>
+    
+
+    <h2>Adicionar ao Carrinho</h2>
+    <form>
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade" min="1" value="1"><br><br>
+
+        <label>Cor:</label><br>
+        <input type="radio" id="cor1" name="cor" value="vermelho">
+        <label for="cor1">Vermelho</label><br>
+        <input type="radio" id="cor2" name="cor" value="azul">
+        <label for="cor2">Azul</label><br>
+        <input type="radio" id="cor3" name="cor" value="verde">
+        <label for="cor3">Verde</label><br>
+        <input type="radio" id="cor4" name="cor" value="preto">
+        <label for="cor3">Preto</label><br><br>
+
+        <label for="tamanho">Tamanho:</label>
+        <select id="tamanho" name="tamanho">
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            <option value="32">32</option>
+            <option value="33">33</option>
+            <option value="34">34</option>
+            <option value="35">35</option>
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+        </select><br><br>
+
+        <button type="submit">Adicionar ao Carrinho</button>
+    </form>
+
+</body>
+
+</html>
