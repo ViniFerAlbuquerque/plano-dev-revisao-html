@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Transforme sua vida com VinTrainer!">
+    <title> Landing Page!</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#" aria-label="Página inicial">
+                <!-- Logo como texto (poderia ser imagem) -->
+                <strong>SEU TREINO!</strong>
+            </a>
+
+            <ul>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#cadastro">Começar Agora</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ====== SEÇÃO HERO ====== -->
+        <!-- A primeira coisa que o usuário vê - deve ser impactante! -->
+        <section id="hero" aria-labelledby="hero-titulo">
+            <h1 id="hero-titulo">Transforme sua Vida com VinTrainer!</h1>
+
+            <p>
+               As melhores divisões de treino para cada objetivo!
+            </p>
+
+            <!-- CTA = Call to Action (chamada para ação) -->
+            <a href="#cadastro">
+                Tenha uma avaliação Grátis Agora!/80*-
+            </a>
+        </section>
+
+        <!-- ====== SEÇÃO BENEFÍCIOS ====== -->
+        <!-- Usamos <article> para cada card pois são conteúdos independentes -->
+        <section id="beneficios" aria-labelledby="beneficios-titulo">
+            <h2 id="beneficios-titulo">Por que escolher VinTrainer?</h2>
+
+            <div>
+                <!-- Card 1 -->
+                <article>
+                    <!-- Ícone usando emoji (poderia ser <img> ou ícone SVG) -->
+                    <span aria-hidden="true">🎯</span>
+                    <h3>Treinos personalizados!</h3>
+                    <p>
+                        Desenvolva sua saúde adaptando com o treino,
+                        e atividade física que combina com você.
+                    </p>
+                </article>
+
+                <!-- Card 2 -->
+                <article>
+                    <span aria-hidden="true">👨</span>
+                    <h3>Mentoria Individual</h3>
+                    <p>
+                        Tire suas dúvidas com profissionais
+                        experientes que trabalham no mercado.
+                    </p>
+                </article>
+
+                <!-- Card 3 -->
+                <article>
+                    <span aria-hidden="true">📱</span>
+                    <h3>Acesso Vitalício</h3>
+                    <p>
+                        Treine no seu ritmo, de qualquer lugar, cumprindo seu objetivo mímimo
+                        com acesso para sempre à sua área de treino e dados médicos.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ====== SEÇÃO DEPOIMENTOS ====== -->
+        <!-- <blockquote> é semântico para citações -->
+        <section id="depoimentos" aria-labelledby="depoimentos-titulo">
+            <h2 id="depoimentos-titulo">O que nossos alunos dizem</h2>
+
+            <div>
+                <!-- Depoimento 1 -->
+                <article>
+                    <blockquote>
+                        <p>
+                            "Em 3 meses saí do sedentarismo e consegui minha
+                            condição física que almejava.
+                            O método adequado às minhas necessidades fez toda diferença!"
+                        </p>
+                    </blockquote>
+                    <footer>
+                        <!-- <cite> indica a fonte da citação -->
+                        <img src="https://i.pravatar.cc/80?img=11" alt="Foto de João Silva" width="80" height="80">
+                        <cite>
+                            <strong>João Silva</strong>
+                            <span>Desenvolvedor Front-end na TechCorp!</span>
+                        </cite>
+                    </footer>
+                </article>
+
+                <!-- Depoimento 2 -->
+                <article>
+                    <blockquote>
+                        <p>
+                            "O acompanhamento foi essencial! Sempre que
+                            estava com dúvida, tinha alguém
+                            para me ajudar e motivar."
+                        </p>
+                    </blockquote>
+                    <footer>
+                        <img src="https://i.pravatar.cc/80?img=5" alt="Foto de Maria Santos" width="80" height="80">
+                        <cite>
+                            <strong>Maria Santos</strong>
+                            <span>Coordenadora financeira!</span>
+                        </cite>
+                    </footer>
+                </article>
+            </div>
+        </section>
+
+        <!-- ====== SEÇÃO FAQ ====== -->
+        <!-- <details> e <summary> são perfeitos para FAQ! -->
+        <!-- São interativos nativamente (abrem/fecham sem JavaScript) -->
+        <section id="faq" aria-labelledby="faq-titulo">
+            <h2 id="faq-titulo">Perguntas Frequentes</h2>
+
+            <div>
+                <details>
+                    <summary>Preciso ter bom condicionamento físico?</summary>
+                    <p>
+                        Não! Nosso acompanhamento começa com sua avaliação física.
+                        Você só precisa nos repassar seus exames e dados médicos.
+                        Temos acompanhamentoss específicos para quem nunca praticou nenhuma atividade física.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Quanto tempo leva para conseguir ficar em forma?</summary>
+                    <p>
+                        Depende da sua dedicação, mas a média dos nossos alunos
+                        é de 3 a 6 meses. Oferecemos suporte de treinos!
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Posso parcelar o pagamento?</summary>
+                    <p>
+                        Sim! Oferecemos parcelamento em até 12x no cartão
+                        de crédito. Também temos opção de boleto à vista
+                        com 10% de desconto.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Tem acompanhamento do desenvolvimento físico?</summary>
+                    <p>
+                        Sim! Ao concluir cada sessão de treino você passará
+                        por uma avaliação. Ao final do trimestre completo,
+                        você recebe o progresso e onde reforçar.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- ====== SEÇÃO CADASTRO (FORMULÁRIO) ====== -->
+        <section id="cadastro" aria-labelledby="cadastro-titulo">
+            <h2 id="cadastro-titulo">Comece sua jornada funcional!</h2>
+            <p>Cadastre-se e receba acesso gratuito à primeira semana de treino.</p>
+
+            <form action="/cadastro" method="POST">
+                <div>
+                    <label for="nome">Seu nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: João da Silva" autocomplete="name"
+                        required>
+                </div>
+
+                <div>
+                    <label for="email">Seu melhor e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Ex: joao@email.com" autocomplete="email"
+                        required>
+                </div>
+
+                <button type="submit">
+                    Quero Começar Grátis
+                </button>
+
+                <p>
+                    <small>
+                        Ao se cadastrar, você concorda com nossos
+                        <a href="/termos">Termos de Uso</a> e
+                        <a href="/privacidade">Política de Privacidade</a>.
+                    </small>
+                </p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ========================================
+         FOOTER - Rodapé com redes sociais
+         ======================================== -->
+    <footer>
+        <div>
+            <p><strong>VinTrainer</strong></p>
+            <p>Transformando vidas através da educação corporal desde 2025.</p>
+        </div>
+
+        <!-- Links de redes sociais -->
+        <nav aria-label="Redes sociais">
+            <ul>
+                <li>
+                    <a href="https://instagram.com/vintrainer" target="_blank" rel="noopener noreferrer"
+                        aria-label="Siga-nos no Instagram">
+                        📷 Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/vintrainer" target="_blank" rel="noopener noreferrer"
+                        aria-label="Inscreva-se no YouTube">
+                        ▶️ YouTube
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/company/vintrainer" target="_blank" rel="noopener noreferrer"
+                        aria-label="Conecte-se no LinkedIn">
+                        💼 LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/vintrainer" target="_blank" rel="noopener noreferrer"
+                        aria-label="Veja nosso GitHub">
+                        🐙 GitHub
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <hr>
+
+        <p>
+            <small>
+                © 2026 VinTrainer. Todos os direitos reservados.
+                CNPJ: 00.000.000/0001-00
+            </small>
+        </p>
+    </footer>
+
+</body>
+
+</html>
