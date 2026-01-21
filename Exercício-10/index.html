@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Portal News - As principais notícias do Brasil e do mundo em tempo real">
+    <title>Portal News - Notícias em Tempo Real</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Logo do portal -->
+        <div>
+            <a href="/" aria-label="Ir para página inicial">
+                <strong>Portal</strong><span>News</span>
+            </a>
+            <p>Notícias em tempo real</p>
+        </div>
+
+        <!-- Menu de navegação por categorias -->
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="/" aria-current="page">Início</a></li>
+                <li><a href="/politica">Política</a></li>
+                <li><a href="/economia">Economia</a></li>
+                <li><a href="/tecnologia">Tecnologia</a></li>
+                <li><a href="/esportes">Esportes</a></li>
+                <li><a href="/entretenimento">Entretenimento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Container para o layout de duas colunas -->
+        <div>
+
+            <!-- ====== ÁREA DE NOTÍCIAS ====== -->
+            <div>
+
+                <!-- NOTÍCIA EM DESTAQUE -->
+                <!-- <article> é perfeito para notícias - conteúdo independente -->
+                <article aria-labelledby="destaque-titulo">
+                    <!-- Imagem grande da notícia principal -->
+                    <figure>
+                        <img src="https://picsum.photos/800/450?random=1"
+                            alt="Líderes mundiais reunidos em mesa de conferência durante cúpula do G20" width="800"
+                            height="450">
+                        <figcaption>
+                            Foto: Agência Internacional / Divulgação
+                        </figcaption>
+                    </figure>
+
+                    <!-- Cabeçalho da notícia -->
+                    <header>
+                        <!-- Categoria como link -->
+                        <a href="/politica" rel="tag">Política</a>
+
+                        <h1 id="destaque-titulo">
+                            Líderes do G20 chegam a acordo histórico sobre mudanças climáticas
+                        </h1>
+
+                        <!-- Metadados da publicação -->
+                        <p>
+                            <!-- <time> é semântico para datas -->
+                            Publicado em
+                            <time datetime="2024-01-15T14:30:00-03:00">
+                                15 de janeiro de 2024 às 14h30
+                            </time>
+                            | Por <a href="/autor/maria-silva" rel="author">Maria Silva</a>
+                        </p>
+                    </header>
+
+                    <!-- Resumo/Lead da notícia -->
+                    <p>
+                        Em reunião que durou mais de 12 horas, representantes das
+                        maiores economias do mundo firmaram compromisso inédito
+                        para redução de emissões de carbono até 2030. O acordo
+                        prevê investimentos de US$ 500 bilhões em energia renovável.
+                    </p>
+
+                    <!-- Link para notícia completa -->
+                    <footer>
+                        <a href="/noticia/g20-acordo-climatico"
+                            aria-label="Leia a notícia completa sobre o acordo do G20">
+                            Leia mais →
+                        </a>
+                    </footer>
+                </article>
+
+                <!-- ====== GRID DE NOTÍCIAS SECUNDÁRIAS ====== -->
+                <section aria-labelledby="ultimas-titulo">
+                    <h2 id="ultimas-titulo">Últimas Notícias</h2>
+
+                    <!-- Container do grid -->
+                    <div>
+
+                        <!-- Notícia 1 -->
+                        <article>
+                            <a href="/noticia/tecnologia-ia-2024">
+                                <img src="https://picsum.photos/300/200?random=2"
+                                    alt="Robô humanoide em laboratório de pesquisa" width="300" height="200">
+                            </a>
+                            <header>
+                                <a href="/tecnologia" rel="tag">Tecnologia</a>
+                                <h3>
+                                    <a href="/noticia/tecnologia-ia-2024">
+                                        Inteligência Artificial deve criar 5 milhões de empregos até 2025
+                                    </a>
+                                </h3>
+                                <time datetime="2024-01-15T12:00:00-03:00">
+                                    15/01/2024 - 12h00
+                                </time>
+                            </header>
+                        </article>
+
+                        <!-- Notícia 2 -->
+                        <article>
+                            <a href="/noticia/economia-dolar">
+                                <img src="https://picsum.photos/300/200?random=3"
+                                    alt="Notas de dólar americano espalhadas" width="300" height="200">
+                            </a>
+                            <header>
+                                <a href="/economia" rel="tag">Economia</a>
+                                <h3>
+                                    <a href="/noticia/economia-dolar">
+                                        Dólar fecha em queda e atinge menor valor em seis meses
+                                    </a>
+                                </h3>
+                                <time datetime="2024-01-15T11:30:00-03:00">
+                                    15/01/2024 - 11h30
+                                </time>
+                            </header>
+                        </article>
+
+                        <!-- Notícia 3 -->
+                        <article>
+                            <a href="/noticia/esportes-brasileirao">
+                                <img src="https://picsum.photos/300/200?random=4"
+                                    alt="Jogadores comemorando gol em estádio lotado" width="300" height="200">
+                            </a>
+                            <header>
+                                <a href="/esportes" rel="tag">Esportes</a>
+                                <h3>
+                                    <a href="/noticia/esportes-brasileirao">
+                                        Brasileirão 2024: confira a tabela completa e favoritos
+                                    </a>
+                                </h3>
+                                <time datetime="2024-01-15T10:00:00-03:00">
+                                    15/01/2024 - 10h00
+                                </time>
+                            </header>
+                        </article>
+
+                        <!-- Notícia 4 -->
+                        <article>
+                            <a href="/noticia/saude-vacina">
+                                <img src="https://picsum.photos/300/200?random=5"
+                                    alt="Profissional de saúde aplicando vacina em paciente" width="300" height="200">
+                            </a>
+                            <header>
+                                <a href="/saude" rel="tag">Saúde</a>
+                                <h3>
+                                    <a href="/noticia/saude-vacina">
+                                        Nova vacina contra dengue será distribuída em fevereiro
+                                    </a>
+                                </h3>
+                                <time datetime="2024-01-15T09:15:00-03:00">
+                                    15/01/2024 - 09h15
+                                </time>
+                            </header>
+                        </article>
+
+                        <!-- Notícia 5 -->
+                        <article>
+                            <a href="/noticia/entretenimento-oscar">
+                                <img src="https://picsum.photos/300/200?random=6"
+                                    alt="Estatueta do Oscar dourada em fundo vermelho" width="300" height="200">
+                            </a>
+                            <header>
+                                <a href="/entretenimento" rel="tag">Entretenimento</a>
+                                <h3>
+                                    <a href="/noticia/entretenimento-oscar">
+                                        Oscar 2024: filme brasileiro está entre os indicados
+                                    </a>
+                                </h3>
+                                <time datetime="2024-01-15T08:45:00-03:00">
+                                    15/01/2024 - 08h45
+                                </time>
+                            </header>
+                        </article>
+
+                        <!-- Notícia 6 -->
+                        <article>
+                            <a href="/noticia/educacao-enem">
+                                <img src="https://picsum.photos/300/200?random=7"
+                                    alt="Estudantes em sala de aula fazendo prova" width="300" height="200">
+                            </a>
+                            <header>
+                                <a href="/educacao" rel="tag">Educação</a>
+                                <h3>
+                                    <a href="/noticia/educacao-enem">
+                                        MEC divulga calendário do ENEM 2024 com novidades
+                                    </a>
+                                </h3>
+                                <time datetime="2024-01-15T08:00:00-03:00">
+                                    15/01/2024 - 08h00
+                                </time>
+                            </header>
+                        </article>
+
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- ====== BARRA LATERAL ====== -->
+            <!-- <aside> é semântico para conteúdo relacionado mas secundário -->
+            <aside>
+
+                <!-- Notícias Mais Lidas -->
+                <section aria-labelledby="mais-lidas-titulo">
+                    <h2 id="mais-lidas-titulo">📈 Mais Lidas</h2>
+
+                    <!-- Lista ordenada - a ordem importa! -->
+                    <ol>
+                        <li>
+                            <a href="/noticia/mais-lida-1">
+                                <span>1</span>
+                                Previsão do tempo: onda de calor atinge todo o país
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/noticia/mais-lida-2">
+                                <span>2</span>
+                                Mega-Sena acumula e prêmio chega a R$ 150 milhões
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/noticia/mais-lida-3">
+                                <span>3</span>
+                                Novo iPhone é anunciado com recursos revolucionários
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/noticia/mais-lida-4">
+                                <span>4</span>
+                                Combustíveis terão novo aumento a partir de fevereiro
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/noticia/mais-lida-5">
+                                <span>5</span>
+                                Série brasileira bate recorde de audiência na Netflix
+                            </a>
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- Formulário de Busca -->
+                <section aria-labelledby="busca-titulo">
+                    <h2 id="busca-titulo">🔍 Buscar Notícias</h2>
+
+                    <form action="/busca" method="GET" role="search">
+                        <label for="campo-busca" class="sr-only">
+                            Digite sua busca
+                        </label>
+                        <input type="search" id="campo-busca" name="q" placeholder="O que você procura?"
+                            aria-label="Buscar notícias" required>
+                        <button type="submit">
+                            Buscar
+                        </button>
+                    </form>
+                </section>
