@@ -1,0 +1,379 @@
+header {
+    display: flex;
+    justify-content: space-between; /* Distribui os 3 blocos */
+    align-items: center;            /* Alinha verticalmente ao centro */
+    padding: 1rem 2rem;
+    background-color: #c4c4c4;
+}
+
+/* ========================================
+   1. CSS RESET + CONFIGURAÇÕES GLOBAIS
+   ======================================== */
+
+/* Reset básico - Remove inconsistências entre navegadores */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* IMPORTANTE: padding e border não aumentam o tamanho do elemento */
+}
+
+/* Variáveis CSS - Sua "paleta de cores" centralizada */
+:root {
+    /* Cores principais */
+    --cor-primaria: #1a1a2e;      /* Azul escuro - profissional */
+    --cor-secundaria: #e94560;    /* Vermelho - destaque/CTAs */
+    --cor-destaque: #f39c12;      /* Laranja - energia, ação */
+    --cor-texto: #333333;
+    --cor-texto-claro: #ffffff;
+    --cor-fundo: #f5f5f5;
+    
+    /* Espaçamentos padronizados */
+    --espacamento-pequeno: 0.5rem;
+    --espacamento-medio: 1rem;
+    --espacamento-grande: 2rem;
+    --espacamento-extra: 4rem;
+    
+    /* Tipografia */
+    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fonte-titulo: 'Arial Black', Gadget, sans-serif;
+    
+    /* Transições suaves */
+    --transicao-padrao: all 0.3s ease;
+}
+
+/* Configurações base do documento */
+html {
+    scroll-behavior: smooth; /* Rolagem suave ao clicar em âncoras */
+}
+
+body {
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+/* Links globais */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transicao-padrao);
+}
+
+/* Imagens responsivas por padrão */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Lista sem marcadores (para menus) */
+ul {
+    list-style: none;
+}
+
+/* ========================================
+   2. HEADER - Navegação Principal
+   ======================================== */
+
+header {
+    display: flex;
+    justify-content: space-between; /* Distribui: logo ← → contato ← → menu */
+    align-items: center;            /* Alinha tudo no centro vertical */
+    padding: var(--espacamento-medio) var(--espacamento-grande);
+    background-color: var(--cor-primaria);
+    
+    /* Header fixo no topo */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Fica acima de todo conteúdo */
+    
+    /* Sombra sutil para "flutuar" */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ====== LOGO ====== */
+header > div:first-child img {
+    width: 180px;
+    height: auto;
+    transition: var(--transicao-padrao);
+}
+
+header > div:first-child img:hover {
+    transform: scale(1.05); /* Leve zoom no hover */
+    color: #ffffff;
+}
+
+/* ====== INFORMAÇÕES DE CONTATO ====== */
+header > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-pequeno);
+    text-align: center;
+}
+
+header > div:nth-child(2) p {
+    color: var(--cor-texto-claro);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+header > div:nth-child(2) a {
+    color: var(--cor-destaque);
+    font-weight: bold;
+}
+
+header > div:nth-child(2) a:hover {
+    color: var(--cor-secundaria);
+    text-decoration: underline;
+}
+
+/* ====== NAVEGAÇÃO / MENU ====== */
+header nav ul {
+    display: flex;
+    gap: var(--espacamento-grande); /* Espaço entre itens do menu */
+}
+
+header nav ul li a {
+    color: var(--cor-texto-claro);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: var(--espacamento-pequeno) var(--espacamento-medio);
+    border-radius: 4px;
+    position: relative;
+}
+
+/* Efeito hover elegante - linha que aparece embaixo */
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-secundaria);
+    transition: var(--transicao-padrao);
+    transform: translateX(-50%);
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Página atual destacada */
+header nav ul li a[aria-current="page"] {
+    color: var(--cor-secundaria);
+}
+
+/* ========================================
+   3. SEÇÃO HERO - Banner Principal
+   ======================================== */
+
+#hero {
+    position: relative;
+    min-height: 80vh; /* 80% da altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Imagem de fundo */
+#hero > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Imagem cobre todo espaço sem distorcer */
+    z-index: 1;
+}
+
+/* Overlay escuro - melhora legibilidade do texto */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(26, 26, 46, 0.9) 0%,
+        rgba(26, 26, 46, 0.7) 50%,
+        rgba(233, 69, 96, 0.3) 100%
+    );
+    z-index: 2;
+}
+
+/* Container do conteúdo */
+#hero > div {
+    position: relative;
+    z-index: 3; /* Acima do overlay */
+    text-align: center;
+    max-width: 800px;
+    padding: var(--espacamento-grande);
+}
+
+/* Título principal */
+#hero h1 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Tamanho responsivo automático! */
+    color: var(--cor-texto-claro);
+    margin-bottom: var(--espacamento-medio);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Subtítulos */
+#hero p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--cor-texto-claro);
+    margin-bottom: var(--espacamento-medio);
+    opacity: 0.95;
+}
+
+#hero p em {
+    color: var(--cor-destaque);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+/*              ↑      ↑      ↑
+           mínimo  ideal  máximo  */
+}
+
+/* ====== BOTÕES CTA (Call to Action) ====== */
+#hero a {
+    display: inline-block;
+    padding: var(--espacamento-medio) var(--espacamento-grande);
+    margin: var(--espacamento-pequeno);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px; /* Botão "pílula" */
+    transition: var(--transicao-padrao);
+}
+
+/* Botão primário - Ver Catálogo */
+#hero a:first-of-type {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+    border: 2px solid var(--cor-secundaria);
+}
+
+#hero a:first-of-type:hover {
+    background-color: transparent;
+    color: var(--cor-secundaria);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(233, 69, 96, 0.3);
+}
+
+/* Botão secundário - Solicitar Orçamento */
+#hero a:last-of-type {
+    background-color: transparent;
+    color: var(--cor-texto-claro);
+    border: 2px solid var(--cor-destaque);
+}
+
+#hero a:last-of-type:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-primaria);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
+}
+
+
+
+           /* ========================================
+   4. RESPONSIVIDADE - Mobile First
+   ======================================== */
+
+/* Tablet e abaixo (768px) */
+@media (max-width: 768px) {
+    
+    /* Header empilha verticalmente */
+    header {
+        flex-direction: column;
+        gap: var(--espacamento-medio);
+        padding: var(--espacamento-medio);
+    }
+    
+    /* Contato some no mobile (fica no footer) */
+    header > div:nth-child(2) {
+        display: none;
+    }
+    
+    /* Menu horizontal com scroll se necessário */
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--espacamento-medio);
+    }
+    
+    /* Hero ajustes */
+    #hero {
+        min-height: 60vh;
+    }
+    
+    #hero > div {
+        padding: var(--espacamento-medio);
+    }
+    
+    /* Botões empilham no mobile */
+    #hero a {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        margin: var(--espacamento-pequeno) auto;
+    }
+}
+
+/* Mobile pequeno (480px) */
+@media (max-width: 480px) {
+    
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--espacamento-pequeno);
+    }
+    
+    header nav ul li a {
+        padding: var(--espacamento-medio);
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+    }
+}
+
+/* ========================================
+   5. SEÇÃO BOAS-VINDAS
+   ======================================== */
+
+#boas-vindas {
+    padding: var(--espacamento-extra) var(--espacamento-grande);
+    text-align: center;
+    background-color: var(--cor-texto-claro);
+}
+
+#boas-vindas h2 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-grande);
+    position: relative;
+}
+
+/* Linha decorativa abaixo do título */
+#boas-vindas h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--cor-secundaria), var(--cor-destaque));
+    margin: var(--espacamento-medio) auto 0;
+    border-radius: 2px;
+}
+
