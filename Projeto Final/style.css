@@ -95,6 +95,15 @@ header {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+footer {
+    display: flex;
+    justify-content: space-between; /* Distribui: logo ← → contato ← → menu */
+    align-items: center;            /* Alinha tudo no centro vertical */
+    padding: var(--espacamento-pequeno) var(--espacamento-pequeno);
+    background-color: var(--cor-destaque);
+}
+
+
 /* ====== LOGO ====== */
 header > div:first-child img {
     width: 180px;
